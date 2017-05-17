@@ -7,7 +7,6 @@
 
 #include <iostream>
 using std::cout;
-using std::cin;
 using std::endl;
 
 #include "RPSGame.hpp"
@@ -15,9 +14,8 @@ using std::endl;
 
 int main() {
     RPSGame game;
-    char strengths;
-    cout << "Would you like to change default strengths (y, n)? ";
-    cin >> strengths;
+    char strengths = getYorN("Would you like to change default strengths (y, n)? ",
+            "Invalid choice.");
     if (strengths == 'y') {
         game.setStrengths();
     }
