@@ -16,7 +16,10 @@
 #include <iostream>
 using std::cout;
 using std::endl;
-using std::cin;
+
+#include <string>
+using std::to_string;
+using std::string;
 
 #include <cstdlib>
 using std::rand;
@@ -43,16 +46,20 @@ RPSGame::~RPSGame() {
 }
 
 void RPSGame::setStrengths() {
+    int strengthLeft = MAX_STRENGTHS;
+    string tools[] = {"rock", "paper", "scissors"};
     cout << "You have " << MAX_STRENGTHS << " points to allocate amongst your tools" << endl;
-    cout << "How many points for rock? " << endl;
-    cin >> playerStrengths[0];
-    cout << "How many points for paper? " << endl;
-    cin >> playerStrengths[1];
-    cout << "How many points for scissors? " << endl;
-    cin >> playerStrengths[2];
-    //TODO add input validation
+    for (int i = 0; i < 2; i++) {
+        playerStrengths[i] = getValidInt("How many points for " + tools[i] + "? ",
+                "Error. Must be between 0 and " + to_string(strengthLeft), 0, strengthLeft);
+        strengthLeft -= playerStrengths[i];
+        cout << "You have " << strengthLeft << " points left." << endl;
+    }
+    cout << "Scissors gets " << strengthLeft << " points." << endl;
+    playerStrengths[2] = strengthLeft;
     
-    //Set computer strengths
+    
+    //set computer strengths
     int totalStrengths = MAX_STRENGTHS;
     int startIdx = rand() % 3;
     for (int i = 0; i < 2; i++) {
@@ -98,12 +105,11 @@ void RPSGame::getStats() {
 }
 
 bool RPSGame::play() {
-    char option;
-    cout << "Choose your tool (r-rock, p-paper, s-scissors, e-exit): ";
-    cin >> option;
-    //TODO input validation
-    if (option != 'e') {
-        setPlayerTool(option);
+    char options[] = {'r', 'p', 's', 'e'};
+    char choice = getValidChar("Choose your tool (r-rock, p-paper, s-scissors, e-exit): ",
+            "Invalid choice.", options, 4);
+    if (choice != 'e') {
+        setPlayerTool(choice);
         setComputerTool();
         Result res = player->fight(computer);
         cout << "Computer chose " << computer->getType() << endl;
