@@ -29,6 +29,7 @@ private:
     int playerWins;
     int computerWins;
     int ties;
+	char bestMove;
 public:
     RPSGame();
     virtual ~RPSGame();
