@@ -1,21 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Paper.hpp
- * Author: david
- *
- * Created on May 7, 2017, 12:24 PM
- */
+/*************************************************************************************
+ ** Program Name: Rock, Paper, Scissors
+ **	Author:  	  David Ackerman, Kirsten Wollam, Trevor Bergstrom, Robert Boespflug
+ ** Date:         May 7, 2017
+ ** Description:  This is the Paper class function header file.
+ *************************************************************************************/
 
 #ifndef PAPER_HPP
 #define PAPER_HPP
 
 #include "Tool.hpp"
 
+
+/************************************************
+* Description: This is the Paper class. This is 
+* a derived class from the base class Tool. This 
+* class represents the 'paper' tool in the rock,
+* paper, scissors simulation. 
+************************************************/
 class Paper : public Tool { 
 public:
     Paper();

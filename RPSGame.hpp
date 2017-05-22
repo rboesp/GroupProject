@@ -1,24 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   RPSGame.hpp
- * Author: david
- *
- * Created on May 7, 2017, 11:33 AM
- */
+/*************************************************************************************
+ ** Program Name: Rock, Paper, Scissors
+ **	Author:  	  David Ackerman, Kirsten Wollam, Trevor Bergstrom, Robert Boespflug
+ ** Date:         May 7, 2017
+ ** Description:  This is the RPSGame class header file. 
+ *************************************************************************************/
 
 #ifndef RPSGAME_HPP
 #define RPSGAME_HPP
 
+#include "InputValidator.hpp"
 #include "Tool.hpp"
 #include "Rock.hpp"
 #include "Paper.hpp"
 #include "Scissors.hpp"
 
+/***************************************************************
+* Description: This is the RPSGame class. This class represents
+* an controls the rock, paper, scissors simulation/game. 
+***************************************************************/
 class RPSGame {
 private:
     const static int MAX_STRENGTHS = 10;

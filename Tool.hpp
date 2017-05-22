@@ -1,19 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Tool.hpp
- * Author: david
- *
- * Created on May 7, 2017, 11:14 AM
- */
+/*************************************************************************************
+ ** Program Name: Rock, Paper, Scissors
+ **	Author:  	  David Ackerman, Kirsten Wollam, Trevor Bergstrom, Robert Boespflug
+ ** Date:         May 7, 2017
+ ** Description:  This is the Tool class header file. 
+ *************************************************************************************/
 
 #ifndef TOOL_HPP
 #define TOOL_HPP
 
+/************************************************************
+* Description: This is the Tool class. This class holds the  
+characteristics that all the  tool in the rock, paper, scissors 
+simulation have in common. 
+************************************************************/
 enum Result{WIN, LOSE, DRAW};
 
 class Tool {
@@ -31,7 +30,7 @@ public:
     char getFavored();
     int getStrength();
     Result fight(Tool*);
-    //pure Virtual function?
+ 
 };
 
 #endif /* TOOL_HPP */
