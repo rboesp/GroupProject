@@ -1,21 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Rock.hpp
- * Author: david
- *
- * Created on May 7, 2017, 11:20 AM
- */
+/*************************************************************************************
+ ** Program Name: Rock, Paper, Scissors
+ **	Author:  	  David Ackerman, Kirsten Wollam, Trevor Bergstrom, Robert Boespflug
+ ** Date:         May 7, 2017
+ ** Description:  This is the Rock class header file.
+ *************************************************************************************/
 
 #ifndef ROCK_HPP
 #define ROCK_HPP
 
 #include "Tool.hpp"
 
+
+/************************************************
+* Description: This is the Rock class. This is 
+* a derived class from the base class Tool. This 
+* class represents the 'Rock' tool in the rock,
+* paper, scissors simulation. 
+************************************************/
 class Rock : public Tool { 
 public:
     Rock();

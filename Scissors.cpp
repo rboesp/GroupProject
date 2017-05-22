@@ -1,20 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Scissors.cpp
- * Author: david
- * 
- * Created on May 7, 2017, 12:24 PM
- */
+/*************************************************************************************
+ ** Program Name: Rock, Paper, Scissors
+ **	Author:  	  David Ackerman, Kirsten Wollam, Trevor Bergstrom, Robert Boespflug
+ ** Date:         May 7, 2017
+ ** Description:  This is the scissors class function implementation file. 
+ *************************************************************************************/
 
 #include "Scissors.hpp"
 
+//default constructor
 Scissors::Scissors() : Scissors(1) {}
 
+
+//constructor
 Scissors::Scissors(int str) : Tool(str) {
     setType('s');
     setFavored('p');
